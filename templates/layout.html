@@ -33,24 +33,30 @@
                 <a href="https://scholar.google.com/citations?user=nJJcwd8AAAAJ&hl=en"
                    class="list-group-item list-group-item-action bg-light"
                    target="_blank">
-                    <img src="../static/images/scholar2.png" alt=""
+                    <img src="../static/images/google-scholar.png" alt=""
                          class="social">
                 </a>
+                {#                <a href="https://scholar.google.com/citations?user=nJJcwd8AAAAJ&hl=en"#}
+                {#                   class="list-group-item list-group-item-action bg-light"#}
+                {#                   target="_blank">#}
+                {#                    <img src="../static/images/scholar2.png" alt=""#}
+                {#                         class="social">#}
+                {#                </a>#}
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                {#                <button class="btn btn-primary" id="menu-toggle">Toggle Menu#}
-                {#                </button>#}
-                {#                <button class="navbar-toggler" type="button"#}
-                {#                        data-toggle="collapse"#}
-                {#                        data-target="#navbarSupportedContent"#}
-                {#                        aria-controls="navbarSupportedContent"#}
-                {#                        aria-expanded="false" aria-label="Toggle navigation">#}
-                {#                    <span class="navbar-toggler-icon"></span>#}
-                {#                </button>#}
+                {#                                <button class="btn btn-primary" id="menu-toggle">Toggle Menu#}
+                {#                                </button>#}
+                {#                                <button class="navbar-toggler" type="button"#}
+                {#                                        data-toggle="collapse"#}
+                {#                                        data-target="#navbarSupportedContent"#}
+                {#                                        aria-controls="navbarSupportedContent"#}
+                {#                                        aria-expanded="false" aria-label="Toggle navigation">#}
+                {#                                    <span class="navbar-toggler-icon"></span>#}
+                {#                                </button>#}
                 <div class="collapse navbar-collapse"
                      id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -76,6 +82,18 @@
                 <br>
                 {% block content %}
                 {% endblock %}
+                <div id="footer">
+                    <span class="footer_text">Powered by </span>
+                    <img
+                            class="footer_image"
+                            src="../static/images/flask.png"
+                            alt="">
+                    <span class="footer_text">and  </span>
+                    <img
+                            class="footer_image"
+                            src="../static/images/pythonanywhere.svg"
+                            alt="">
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -125,7 +143,5 @@
     {% block js %}
     {% endblock %}
     {% block css %}
-
-
     {% endblock %}
 </body>

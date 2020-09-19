@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
-app.env = "development"
+# app.env = "development"
 app.jinja_env.globals['zip'] = zip
 app.jinja_env.globals['enumerate'] = enumerate
 
-
-# flaskKwargs = {'debug': True}
+flaskKwargs = {'debug': False, 'host': '0.0.0.0', 'port': 1111}
 
 
 @app.route('/')
@@ -46,4 +45,4 @@ def get_projects_page():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(**flaskKwargs)
