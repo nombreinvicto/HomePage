@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ title }}</title>
+    <link rel="icon"
+          href="{{ url_for('static', filename='mathIcon.ico') }}">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><b>Mahmud's Homepage</b></div>
+            <img src="../static/images/mypic.jpg" alt=""
+                 class="avatar list-group-item list-group-item-action
+                 bg-light">
+            <div class="list-group list-group-flush">
+                <a href="https://www.linkedin.com/in/mhasan3/"
+                   class="list-group-item list-group-item-action bg-light"
+                   target="_blank">
+                    <img src="../static/images/linkedin.png" alt=""
+                         class="social">
+                </a>
+                <a href="https://github.com/nombreinvicto"
+                   class="list-group-item list-group-item-action bg-light"
+                   target="_blank">
+                    <img src="../static/images/github.png" alt=""
+                         class="social">
+                </a>
+                <a href="https://scholar.google.com/citations?user=nJJcwd8AAAAJ&hl=en"
+                   class="list-group-item list-group-item-action bg-light"
+                   target="_blank">
+                    <img src="../static/images/scholar2.png" alt=""
+                         class="social">
+                </a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                {#                <button class="btn btn-primary" id="menu-toggle">Toggle Menu#}
+                {#                </button>#}
+                {#                <button class="navbar-toggler" type="button"#}
+                {#                        data-toggle="collapse"#}
+                {#                        data-target="#navbarSupportedContent"#}
+                {#                        aria-controls="navbarSupportedContent"#}
+                {#                        aria-expanded="false" aria-label="Toggle navigation">#}
+                {#                    <span class="navbar-toggler-icon"></span>#}
+                {#                </button>#}
+                <div class="collapse navbar-collapse"
+                     id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/"><b>About</b> <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/resume">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/research">Research</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projects">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <h1 class="mt-4">{{ heading }}</h1>
+                <br>
+                <br>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    {#    {% block nav %}#}
+    {#        <nav class="navbar navbar-expand-lg navbar-light bg-light">#}
+    {#            <a class="navbar-brand" href="/"><b>About</b></a>#}
+    {#            <button class="navbar-toggler" type="button" data-toggle="collapse"#}
+    {#                    data-target="#navbarNavAltMarkup"#}
+    {#                    aria-controls="navbarNavAltMarkup" aria-expanded="false"#}
+    {#                    aria-label="Toggle navigation">#}
+    {#                <span class="navbar-toggler-icon"></span>#}
+    {#            </button>#}
+    {#            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">#}
+    {#                <div class="navbar-nav">#}
+    {#                    <a class="nav-item nav-link active"#}
+    {#                       href="/resume">Resume<span#}
+    {#                            class="sr-only">(current)</span>#}
+    {#                    </a>#}
+    {#                    <a class="nav-item nav-link" href="/research">Research</a>#}
+    {#                    <a class="nav-item nav-link" href="/projects">Projects</a>#}
+    {#                    <a class="nav-item nav-link" href="/gallery">Gallery</a>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </nav>#}
+    {#    {% endblock %}#}
+    <div></div>
+
+    {% block bs4_css %}
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+    {% endblock %}
+    {% block bs4_js %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../static/css/sidebar.css">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+    {% block css %}
+
+
+    {% endblock %}
+</body>

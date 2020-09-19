@@ -1,0 +1,14 @@
+.my_content {
+    justify-content: left;
+    width: 50%;
+    /*font-weight: bold ;*/
+    font-weight: 500;
+    font-size: large;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.footnote {
+    font-style: italic;
+    font-weight: 200;
+}
